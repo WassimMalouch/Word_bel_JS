@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="word.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .title {
+        font-size: 60px;
+        color: blue;
+        font-family: "Courier New", Courier, monospace;
+      }
+      button,
+      input,
+      select {
+        height: 40px;
+        background: none;
+        color: rgb(73, 80, 18);
+        font-size: 30px;
+      }
+      textarea{
+        width: 1000px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Word bel JS</div>
+      <div class="menu">
+        <button id="align_left"><i class="fa-solid fa-align-left"></i></button>
+        <button id="align_center"><i class="fa-solid fa-align-center"></i></button>
+        <button id="align_right" ><i class="fa-solid fa-align-right"></i></button>
+        <select id="size">
+          <option>10px</option>
+          <option>15px</option>
+          <option>20px</option>
+          <option>25px</option>
+          <option>30px</option>
+          <option>35px</option>
+          <option>40px</option>
+
+        </select>
+        <select id="font">
+          <option>Georgia, serif</option>
+          <option>"Gill Sans", sans-serif</option>
+          <option>sans-serif</option>
+          <option>serif</option>
+          <option>cursive</option>
+          <option>system-ui</option>
+        </select>
+        <button id="bold"><b>Bold</b></button>
+        <button id="italic"><i>Italic</i></button>
+        <button id="underline"><u>underline</u></button>
+        <input id="color" type="color" />
+      </div>
+      <div>
+        <textarea id="text" cols="100" rows="10"></textarea>
+      </div>
+    </div>
+  </body>
+</html>
