@@ -37,24 +37,36 @@ function size(){
 
 
 function underline(){
-    if(text.style.textDecoration=="underline")
+    if(text.style.textDecoration=="underline"){
     text.style.textDecoration="none";
-    else
+    underlineBtn.classList="notclicked";}
+
+    else{
     text.style.textDecoration="underline";
-}
+    underlineBtn.classList="clicked";}
+    }
+
 
 function italic(){
     if ( text.style.fontStyle=="italic")
-    text.style.fontStyle="normal"
-    else
+    {text.style.fontStyle="normal"
+    italicBtn.classList="notclicked";}
+    else{
     text.style.fontStyle="italic";
-}
-function bold(){
-  if ((text.style.fontWeight)=="" )
-    text.style.fontWeight ="bold";
-    else
-    text.style.fontWeight ="";
+    italicBtn.classList="clicked";}
+    }
 
+
+function bold(){
+  if ((text.style.fontWeight)=="" ){
+    text.style.fontWeight ="bold";
+    boldBtn.classList="clicked";
+    }
+    else{
+    text.style.fontWeight ="";
+    boldBtn.classList="notclicked";
+
+    }
 }
 
 function color(){
@@ -63,14 +75,44 @@ function color(){
 }
 function left(){
     text.style.textAlign="left"
+    leftBtn.classList="clicked"
+    centerBtn.classList="notclicked"
+    rightBtn.classList="notclicked"
+   
 }
 
 function center(){
-    text.style.textAlign="center"
+  
+    if(text.style.textAlign=="center"){
+        centerBtn.classList="notclicked"
+        rightBtn.classList="notclicked"
+        leftBtn.classList="clicked"
+        text.style.textAlign="left"
+
+    }
+    else {
+        text.style.textAlign="center"
+        centerBtn.classList="clicked"
+        rightBtn.classList="notclicked"
+        leftBtn.classList="notclicked"
+    }
 }
 
 function right(){
-    text.style.textAlign="right"
+  
+    if(text.style.textAlign=="right"){
+        centerBtn.classList="notclicked"
+        rightBtn.classList="notclicked"
+        leftBtn.classList="clicked"
+        text.style.textAlign="left"
+
+    }
+    else{
+        text.style.textAlign="right"
+        centerBtn.classList="notclicked"
+        rightBtn.classList="clicked"
+        leftBtn.classList="notclicked"
+    }
 }
 
 
